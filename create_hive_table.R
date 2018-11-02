@@ -127,7 +127,7 @@ createHiveTable = function(infile_path='.', infile_name=NULL, hdfs_file_path=NUL
   if (create_table==T) {
   
     ## Put the data into HDFS
-    cmd = "hdfs dfs -put /opt/data/share05/sandbox/sandbox7/sw659h/demo/workflowautomation/data/es_dtv_dispatch_mobility_aci.csv /sandbox/sandbox7/sw659h/opx/data"
+    cmd = paste("hdfs dfs -put ", path_to_file, hdfs_file)
     system(cmd)
     
     ## Kerberos authentication
